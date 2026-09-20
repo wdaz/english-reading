@@ -17,3 +17,9 @@ Claude Code routine tərəfindən avtomatik yaradılır: hər gün 10:00 və 19:
 2. "Yeni sözlər"-ə bax, tələffüzü ucadan təkrarla.
 3. Mətni ikinci dəfə oxu.
 4. "Suallar"-a öz sözlərinlə cavab ver, sonra "Tərcümə"-yə bax.
+
+## Anlaşılmayan söz olanda
+
+Mətn gələn sessiyada birbaşa sözü yaz — izah orada verilir, sonra avtomatik
+həmin mətnin faylına `## Anlaşılmayan sözlər` bölməsi altında yazılıb push olunur.
+Beləliklə hər mətn öz çətin sözləri ilə birlikdə qalır.
