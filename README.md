@@ -21,5 +21,5 @@ Claude Code routine tərəfindən avtomatik yaradılır: hər gün 10:00 və 19:
 ## Anlaşılmayan söz olanda
 
 Mətn gələn sessiyada birbaşa sözü yaz — izah orada verilir, sonra avtomatik
-həmin mətnin faylına `## Anlaşılmayan sözlər` bölməsi altında yazılıb push olunur.
-Beləliklə hər mətn öz çətin sözləri ilə birlikdə qalır.
+həmin günün mətn faylındakı `## Yeni sözlər` siyahısının sonuna əlavə edilib
+push olunur. Beləliklə hər mətn öz çətin sözləri ilə birlikdə bir yerdə qalır.
