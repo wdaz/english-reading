@@ -12,4 +12,5 @@ Bu indeks təkrarın qarşısını almaq üçündür — yeni mövzu seçərkən
 2026-09-20 | pm | KNOWLEDGE | 8 languages and writing systems | syllabary | The Man Who Invented a Writing System Alone
 2026-09-20 | pm | KNOWLEDGE | 31 mountains and volcanoes | Surtsey | Surtsey: The Island Born from Fire
 2026-09-21 | am | PRACTICAL | 12 public transport and asking for directions | metro | Buying a Metro Ticket from a Machine in a New City
+2026-09-21 | pm | KNOWLEDGE | 21 the human body | stapes | The Smallest Bone in Your Body
 <!-- RUNS:END -->
