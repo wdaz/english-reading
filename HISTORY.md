@@ -14,4 +14,5 @@ Bu indeks təkrarın qarşısını almaq üçündür — yeni mövzu seçərkən
 2026-09-21 | am | PRACTICAL | 12 public transport and asking for directions | metro | Buying a Metro Ticket from a Machine in a New City
 2026-09-21 | pm | KNOWLEDGE | 21 the human body | stapes | The Smallest Bone in Your Body
 2026-09-22 | am | PRACTICAL | 4 visiting a doctor and the pharmacy | pharmacist | Explaining Your Symptoms at the Pharmacy
+2026-09-22 | pm | KNOWLEDGE | 6 famous scientists | transposon | The Scientist Who Discovered Jumping Genes
 <!-- RUNS:END -->
