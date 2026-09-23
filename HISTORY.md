@@ -16,4 +16,5 @@ Bu indeks təkrarın qarşısını almaq üçündür — yeni mövzu seçərkən
 2026-09-22 | am | PRACTICAL | 4 visiting a doctor and the pharmacy | pharmacist | Explaining Your Symptoms at the Pharmacy
 2026-09-22 | pm | KNOWLEDGE | 6 famous scientists | transposon | The Scientist Who Discovered Jumping Genes
 2026-09-23 | am | PRACTICAL | 7 banks, cards and payments | declined | What to Say When Your Card Is Declined
+2026-09-23 | pm | KNOWLEDGE | 14 everyday objects and how they work | vacuum | How a Vacuum Flask Keeps Your Drink Hot
 <!-- RUNS:END -->
