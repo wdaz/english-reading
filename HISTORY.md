@@ -15,4 +15,5 @@ Bu indeks təkrarın qarşısını almaq üçündür — yeni mövzu seçərkən
 2026-09-21 | pm | KNOWLEDGE | 21 the human body | stapes | The Smallest Bone in Your Body
 2026-09-22 | am | PRACTICAL | 4 visiting a doctor and the pharmacy | pharmacist | Explaining Your Symptoms at the Pharmacy
 2026-09-22 | pm | KNOWLEDGE | 6 famous scientists | transposon | The Scientist Who Discovered Jumping Genes
+2026-09-23 | am | PRACTICAL | 7 banks, cards and payments | declined | What to Say When Your Card Is Declined
 <!-- RUNS:END -->
