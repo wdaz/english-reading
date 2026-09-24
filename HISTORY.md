@@ -18,4 +18,5 @@ Bu indeks təkrarın qarşısını almaq üçündür — yeni mövzu seçərkən
 2026-09-23 | am | PRACTICAL | 7 banks, cards and payments | declined | What to Say When Your Card Is Declined
 2026-09-23 | pm | KNOWLEDGE | 14 everyday objects and how they work | vacuum | How a Vacuum Flask Keeps Your Drink Hot
 2026-09-24 | am | PRACTICAL | 8 restaurants and cafes | split | Splitting the Bill at a Restaurant
+2026-09-24 | pm | KNOWLEDGE | 30 books and libraries | chained | Why Medieval Libraries Chained Their Books
 <!-- RUNS:END -->
