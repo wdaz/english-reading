@@ -20,4 +20,5 @@ Bu indeks təkrarın qarşısını almaq üçündür — yeni mövzu seçərkən
 2026-09-24 | am | PRACTICAL | 8 restaurants and cafes | split | Splitting the Bill at a Restaurant
 2026-09-24 | pm | KNOWLEDGE | 30 books and libraries | chained | Why Medieval Libraries Chained Their Books
 2026-09-25 | am | PRACTICAL | 6 job interviews and CVs | gap | Explaining a Gap in Your CV During an Interview
+2026-09-25 | pm | KNOWLEDGE | 33 birds and insects | cicada | Why Cicadas Wait for Prime Numbers
 <!-- RUNS:END -->
