@@ -21,4 +21,5 @@ Bu indeks təkrarın qarşısını almaq üçündür — yeni mövzu seçərkən
 2026-09-24 | pm | KNOWLEDGE | 30 books and libraries | chained | Why Medieval Libraries Chained Their Books
 2026-09-25 | am | PRACTICAL | 6 job interviews and CVs | gap | Explaining a Gap in Your CV During an Interview
 2026-09-25 | pm | KNOWLEDGE | 33 birds and insects | cicada | Why Cicadas Wait for Prime Numbers
+2026-09-26 | am | PRACTICAL | 0 travel: airports and flights | luggage | Reporting Lost Luggage at the Airport
 <!-- RUNS:END -->
