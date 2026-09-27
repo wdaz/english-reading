@@ -108,7 +108,8 @@ PROMPT_RULES = {
     ],
     "routines/weekly.md": GIT_RULES + [
         "TZ=Asia/Baku date '+%G-W%V'", "last_weekly_review", "python3", "down wins",
-        "c1_unlocked", "Səhv sözlər:", "Never write the answers", "### Nəticə: cavablanmayıb",
+        "c1_unlocked", "Səhv sözlər:", "Never write the answers", "exclude every quiz word",
+        "### Nəticə: cavablanmayıb",
         'git commit -m "Weekly review: <label>"', 'git commit -m "Grade word quiz: <label>"',
         'git commit -m "Revert level change: <label>"', "geri qaytar",
     ],

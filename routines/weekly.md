@@ -78,7 +78,7 @@ Question types — use each type at least once:
 - AZ → EN: `"yırtıcı" ingiliscə necədir?`
 - fill the gap: an English sentence in a new context with `____` in place of the word, for example `The cicadas ____ from the ground after 17 years.` — no hint letters.
 
-Never write the answers anywhere — not in the file, not in your message — until you grade his reply in Step 7.
+Never write the answers anywhere — not in the file, not in your message — until you grade his reply in Step 7. This includes `## Həftənin sözləri` in Step 5: a word used in the quiz is itself an answer, so exclude every quiz word from that list.
 
 ## Step 5 — write the review and update LEVEL.md
 
@@ -119,7 +119,7 @@ Write `reviews/<label>.md` (for example `reviews/2026-W40.md`; if it exists, app
 
     ## Həftənin sözləri
 
-    <the words he asked about this week, comma-separated, or —>
+    <the words he asked about this week, EXCLUDING any word used in the quiz above, comma-separated, or —>
 
 The numbers above are only an example; write the real ones. Use `—` for a value with no data. Write dates like `28 sentyabr – 4 oktyabr` with Azerbaijani month names in lower case: yanvar, fevral, mart, aprel, may, iyun, iyul, avqust, sentyabr, oktyabr, noyabr, dekabr.
 
