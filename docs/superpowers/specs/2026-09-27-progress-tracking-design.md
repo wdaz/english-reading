@@ -1,6 +1,6 @@
 # Progress: qiymət, həftəlik və aylıq review — dizayn
 
-Tarix: 2026-09-27 · Status: təsdiqlənib (spec review gözləyir)
+Tarix: 2026-09-27 · Status: təsdiqlənib (2026-09-27)
 
 ## Məqsəd
 
@@ -28,7 +28,7 @@ Uğur meyarı:
 | Başlanğıc | Səhər L3, axşam L2 |
 | C1 | Slot L5-də fasiləsiz 90 gün qalandan sonra L6-ya keçir |
 | Həftəlik söz testi | Var — 5 sual, səhv sözlər növbəti həftəyə keçir |
-| Uzunluq | Pillədən asılı deyil. Hər slotun öz hədəf söz sayı (başlanğıc 100–120); həqiqi say hər mətndə ölçülür. Dəyişmə: qiymətdə istəyə bağlı `+`/`-` → həftəlik ±20 söz, və ya sessiyada `uzat`/`qısalt` əmri → dərhal |
+| Uzunluq | Pillədən asılı deyil. Hər slotun öz hədəf söz sayı (başlanğıc 100–120); həqiqi say hər mətndə ölçülür. Dəyişmə yalnız qiymətdəki istəyə bağlı `+`/`-` ilə → həftəlik review ±20 söz (birbaşa əmr yoxdur) |
 | Arxitektura | Repo faylları + 3 routine (gündəlik, həftəlik, aylıq) |
 
 ## Arxitektura
@@ -158,16 +158,12 @@ söz sayı idarə edir; cümlə sayı ondan və pillənin cümlə mürəkkəbliy
 - **Addım:** 20 söz; hüdud 60–300. Aralığın eni həmişə 20.
 - **Pillədən asılı deyil:** pillə dəyişəndə uzunluq dəyişmir, uzunluq dəyişəndə pillə dəyişmir.
 
-### Uzunluğun dəyişmə yolları
+### Uzunluğun dəyişməsi
 
-1. **Həftəlik, qiymətə görə** (hər slot ayrıca): pəncərədəki qiymətlərdə
-   `+` sayı − `-` sayı ≥ 2 → +20 söz; ≤ −2 → −20 söz; qalan → saxla.
-2. **Əmrlə, dərhal:** istənilən routine sessiyasında —
-   - `uzat` / `qısalt` → ±20 söz. Gündəlik sessiyada slot göstərilməsə həmin mətnin
-     slotu; review sessiyasında slot tələb olunur (`səhəri uzat`, `axşamı qısalt`).
-   - `səhər 150 söz` → aralıq 140–160 (N−10…N+10).
-   - `LEVEL.md` yenilənir, Tarixçəyə sətir, commit `Change text length: am 100-120 → 120-140`,
-     push, təsdiq mesajı. Növbəti mətndən qüvvəyə minir.
+Yeganə yol — həftəlik review, qiymətlərdəki `+`/`-` işarələrinə görə (hər slot ayrıca):
+pəncərədəki qiymətlərdə `+` sayı − `-` sayı ≥ 2 → +20 söz; ≤ −2 → −20 söz; qalan → saxla.
+Birbaşa əmr (`uzat` / `qısalt`) yoxdur. İstifadəçi istəsə `LEVEL.md`-də `am_words` /
+`pm_words`-u əl ilə dəyişə bilər.
 
 ## Gündəlik routine dəyişiklikləri
 
@@ -183,12 +179,33 @@ Mövcud routine (`trig_017Pt3sNTiukVCgvymhiu1JK`) yenilənir; git qaydaları də
    sətri (yeni söz sayı, qrammatika, məzmun) və slotun hədəf söz aralığı.
    Yazandan sonra söz sayını ölçür, lazım olsa düzəldir (bax: Uzunluq).
 4. **Step 5** — `HISTORY.md` sətrinin sonuna `| L<n> | <n>w`.
-5. **Step 6** — mesajın sonuna (fayla yox) bir sətir xatırlatma:
-   - səhər: `Qiymət: çətinlik · işlədə bilərəm · faydalı [+ uzun / - qısa] — məs: 2 4 5`
-   - axşam: `Qiymət: çətinlik · bilirdim(b/q/y) · anlama · maraq [+ uzun / - qısa] — məs: 3 q 4 5`
+5. **Step 6** — mesajın sonuna (fayla yox) `## Qiymət kodu` başlığı və kod bloku
+   şəklində format + nümunə. Nümunə rəqəmləri sabitdir (həqiqi qiymət deyil).
+
+   Səhər:
+
+   ~~~
+   Qiymət: <çətinlik> <işlədə bilərəm> <faydalı> [uzunluq]
+   Nümunə: 2 4 5 +
+
+   çətinlik, işlədə bilərəm, faydalı: 1–5
+   uzunluq: + uzun olsun · - qısa olsun · boş = uyğun
+   ~~~
+
+   Axşam:
+
+   ~~~
+   Qiymət: <çətinlik> <bilirdim> <anlama> <maraq> [uzunluq]
+   Nümunə: 3 q 4 5 -
+
+   çətinlik, anlama, maraq: 1–5
+   bilirdim: b bəli · q qismən · y yox
+   uzunluq: + uzun olsun · - qısa olsun · boş = uyğun
+   ~~~
+
 6. **Step 7** — söz axınına əlavə olaraq qiymət axını: fayla `## Qiymət`,
    `RATINGS.md`-yə sətir (upsert), commit `Rate reading text: <title>`, push,
-   təsdiq mesajı. Uzunluq əmrləri (`uzat` / `qısalt` / `N söz`) də burada işlənir.
+   təsdiq mesajı.
 
 ## Həftəlik routine
 
@@ -356,7 +373,7 @@ Routine-lər bu faylı oxuyur və yeniləyir. Rəqəmləri əl ilə dəyişmək 
 | `HISTORY.md` sətrində pillə yoxdur | `L2` hesab olunur |
 | `HISTORY.md` sətrində söz sayı yoxdur | mətn faylından sayılır |
 | Mətn 2 cəhddən sonra da hədəfə düşmür | olduğu kimi göndərilir, həqiqi say yazılır |
-| Uzunluq əmri hüdudu keçir (60–300) | hüdudda saxlanır, istifadəçiyə deyilir |
+| Həftəlik uzunluq addımı hüdudu keçir (60–300) | hüdudda saxlanır, review-da qeyd olunur |
 | Review run-u düşdü | növbəti run `last_weekly_review`-dan bəri hamısını götürür |
 | Həftəlik və aylıq eyni gün | 30 dəqiqə fərq; push rədd olunarsa `pull --rebase` |
 | Git | `checkout -B main origin/main` + `push origin HEAD:main` (mövcud qayda) |
@@ -367,7 +384,7 @@ Routine-lər bu faylı oxuyur və yeniləyir. Rəqəmləri əl ilə dəyişmək 
 2. Gündəlik prompt yenilənir. İlk real sınaq: növbəti səhər run-u — mətn L3-də,
    100–120 söz, HISTORY-də `| L3 | <n>w`, mesajın sonunda xatırlatma.
 3. İstifadəçi həmin sessiyada qiymət yazır (məs. `2 4 5 +`) → `## Qiymət` +
-   `RATINGS.md` sətri yoxlanır; `uzat` əmri → `LEVEL.md`-də `am_words` dəyişir.
+   `RATINGS.md` sətri (`uzn=+`) yoxlanır; mesajın sonunda `## Qiymət kodu` bloku görünür.
 4. Həftəlik routine yaradılır və bu gün (W39) bir dəfə əl ilə işlədilir: qiymət
    yoxdur halı + söz testi yoxlanır; istifadəçi testə cavab verir → qiymətləndirmə
    yoxlanır.
