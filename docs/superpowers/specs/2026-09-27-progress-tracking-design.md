@@ -6,7 +6,8 @@ Tarix: 2026-09-27 · Status: təsdiqlənib (spec review gözləyir)
 
 Hər mətndən sonra qısa qiymət vermək, həftəlik və aylıq review ilə mətnlərin
 çətinliyini avtomatik tənzimləmək: asan gəlirsə çətinləşsin və mövzu dərinləşsin,
-çətin gəlirsə asanlaşsın. Progress zamanla görünsün.
+çətin gəlirsə asanlaşsın. Mətnin uzunluğu (söz sayı) ölçülür və səviyyədən asılı
+olmayaraq ayrıca uzadıla və ya qısaldıla bilir. Progress zamanla görünsün.
 
 Uğur meyarı:
 
@@ -27,6 +28,7 @@ Uğur meyarı:
 | Başlanğıc | Səhər L3, axşam L2 |
 | C1 | Slot L5-də fasiləsiz 90 gün qalandan sonra L6-ya keçir |
 | Həftəlik söz testi | Var — 5 sual, səhv sözlər növbəti həftəyə keçir |
+| Uzunluq | Pillədən asılı deyil. Hər slotun öz hədəf söz sayı (başlanğıc 100–120); həqiqi say hər mətndə ölçülür. Dəyişmə: qiymətdə istəyə bağlı `+`/`-` → həftəlik ±20 söz, və ya sessiyada `uzat`/`qısalt` əmri → dərhal |
 | Arxitektura | Repo faylları + 3 routine (gündəlik, həftəlik, aylıq) |
 
 ## Arxitektura
@@ -49,7 +51,7 @@ gündəlik ─────────► LEVEL.md ◄────────�
 | `RATINGS.md` | yeni | gündəlik (Step 7) | hər qiymət bir sətir |
 | `reviews/YYYY-Www.md` | yeni | həftəlik | həftənin statistikası, qərar, söz testi |
 | `reviews/YYYY-MM.md` | yeni | aylıq | trend, maraq, genişlənmə, C1 yoxlaması |
-| `HISTORY.md` | dəyişir | gündəlik | sətrin sonuna `\| L<n>` sütunu |
+| `HISTORY.md` | dəyişir | gündəlik | sətrin sonuna `\| L<n> \| <n>w` — pillə və həqiqi söz sayı |
 | `texts/*.md` | dəyişir | gündəlik (Step 7) | faylın sonuna `## Qiymət` bölməsi |
 | `TOPICS.md` | dəyişir | aylıq | siyahıların sonuna yeni kateqoriyalar |
 | `README.md` | dəyişir | bir dəfə, əl ilə | qiymət bələdçisi, şkala anker-ləri, review izahı |
@@ -79,6 +81,16 @@ Kod: `<çətinlik> <bilirdim> <anlama> <maraq>` — `bilirdim` ∈ {b, q, y}
 
 Anlama addımları: 1 ≈ 20% · 2 ≈ 40% · 3 ≈ 60% · 4 ≈ 80% · 5 ≈ 100%.
 
+### Uzunluq (hər iki slot, istəyə bağlı)
+
+Kodun sonuna bir işarə əlavə etmək olar:
+
+| İşarə | Məna | Nümunə |
+|---|---|---|
+| `+` | daha uzun olsun | `2 4 5 +` |
+| `-` | daha qısa olsun | `3 q 4 5 -` |
+| (yoxdur) | uzunluq uyğundur | `3 q 4 5` |
+
 ### Qəbul qaydaları
 
 - Təbii dil də qəbul olunur ("asan idi, bilmirdim, çox maraqlı") — routine koda çevirir.
@@ -99,37 +111,63 @@ Mətn faylının sonuna (əvəz edilə bilən blok):
 - Mövzunu bilirdim: qismən
 - Anlama: 4/5
 - Maraq: 5/5
+- Uzunluq: uyğun (112 söz)
 ```
 
-Səhər variantı: `Çətinlik`, `İşlədə bilərəm`, `Faydalı`.
+Səhər variantı: `Çətinlik`, `İşlədə bilərəm`, `Faydalı`, `Uzunluq`.
+`Uzunluq` dəyərləri: `uyğun` / `daha uzun olsun` / `daha qısa olsun`, mötərizədə həqiqi söz sayı.
 
 `RATINGS.md` — `<!-- RATINGS:BEGIN -->` / `<!-- RATINGS:END -->` arasında,
 açar=dəyər formatında (iki sxem bir faylda qarışmasın deyə):
 
 ```
-2026-09-28 | am | 5 hotels and accommodation | L3 | cet=2 isl=4 fay=5 | 2026-09-28 10:42
-2026-09-27 | pm | 1 space and planets | L2 | cet=3 bil=q anl=4 mar=5 | 2026-09-27 21:10
+2026-09-28 | am | 5 hotels and accommodation | L3 | 108w | cet=2 isl=4 fay=5 uzn=+ | 2026-09-28 10:42
+2026-09-27 | pm | 1 space and planets | L2 | 130w | cet=3 bil=q anl=4 mar=5 uzn=0 | 2026-09-27 21:10
 ```
 
-Sütunlar: mətn tarixi · slot · kateqoriya · mətnin pilləsi · qiymət · qiymət vaxtı (Bakı).
-Mətnin pilləsi `HISTORY.md` sətrindən götürülür (sütun yoxdursa `L2`).
+Sütunlar: mətn tarixi · slot · kateqoriya · mətnin pilləsi · həqiqi söz sayı · qiymət · qiymət vaxtı (Bakı).
+`uzn` ∈ {`+`, `0`, `-`}. Pillə və söz sayı `HISTORY.md` sətrindən götürülür; yoxdursa
+pillə `L2`, söz sayı isə mətn faylından sayılır.
 
 ## Səviyyə pilləkəni
 
 Qrammatika hər iki slot üçün eynidir; məzmun sütunu slota görə fərqlənir.
 
-| Pillə | CEFR | Cümlə | Yeni söz | Qrammatika | Səhər məzmunu | Axşam məzmunu |
-|---|---|---|---|---|---|---|
-| L1 | A2 | 5–6 | 4–5 | present/past simple, can, going to | sadə xahiş | bir fakt və ya hadisə |
-| L2 | A2+ | 6–7 | 5–6 | + present perfect, comparatives, because/so | + problem, şikayət | + səbəb |
-| L3 | B1 | 7–8 | 6–7 | + passive, first conditional, relative clauses | + izah etmək, danışıq | + nəticə, müqayisə |
-| L4 | B1+ | 8–9 | 7–8 | + second conditional, reported speech, phrasal verbs | + rəsmi dil, telefon, e-mail | + fərqli baxışlar |
-| L5 | B2 | 9–10 | 8 | mixed tenses, idiomlar, bağlayıcılar | + nəzakət, yumşaltma | + nüans, mübahisəli tərəf |
-| L6 | C1 | 10–12 | 8–10 | inversion, cleft sentences, mixed conditionals | + inandırma, diplomatik dil | + abstrakt arqument, gizli məna |
+| Pillə | CEFR | Yeni söz | Qrammatika | Səhər məzmunu | Axşam məzmunu |
+|---|---|---|---|---|---|
+| L1 | A2 | 4–5 | present/past simple, can, going to | sadə xahiş | bir fakt və ya hadisə |
+| L2 | A2+ | 5–6 | + present perfect, comparatives, because/so | + problem, şikayət | + səbəb |
+| L3 | B1 | 6–7 | + passive, first conditional, relative clauses | + izah etmək, danışıq | + nəticə, müqayisə |
+| L4 | B1+ | 7–8 | + second conditional, reported speech, phrasal verbs | + rəsmi dil, telefon, e-mail | + fərqli baxışlar |
+| L5 | B2 | 8 | mixed tenses, idiomlar, bağlayıcılar | + nəzakət, yumşaltma | + nüans, mübahisəli tərəf |
+| L6 | C1 | 8–10 | inversion, cleft sentences, mixed conditionals | + inandırma, diplomatik dil | + abstrakt arqument, gizli məna |
 
 Pilləkən `LEVEL.md`-də saxlanır — gündəlik routine mətni yazarkən öz slotunun
 sətrinə baxır. Bütün pillələrdə 2 sual qalır; yuxarı pillələrdə suallar "niyə /
-nə olardı" tipinə keçir.
+nə olardı" tipinə keçir. Pilləkəndə cümlə sayı yoxdur — uzunluğu ayrıca hədəf
+söz sayı idarə edir; cümlə sayı ondan və pillənin cümlə mürəkkəbliyindən çıxır.
+
+## Uzunluq
+
+- **Hədəf:** `LEVEL.md`-də hər slot üçün söz aralığı — `am_words: 100-120`,
+  `pm_words: 100-120` (indiki mətnlərin ortası: səhər 107, axşam 114).
+- **Ölçmə:** gündəlik routine mətni yazandan sonra passage-ın sözlərini sayır
+  (`### ` alt başlığı ilə ilk `## ` arasındakı hissə, `wc -w`). Aralıqdan ±10%-dən
+  çox kənardırsa mətni düzəldir (ən çox 2 cəhd), sonra həqiqi sayı `HISTORY.md`-yə
+  `| <n>w` kimi yazır.
+- **Addım:** 20 söz; hüdud 60–300. Aralığın eni həmişə 20.
+- **Pillədən asılı deyil:** pillə dəyişəndə uzunluq dəyişmir, uzunluq dəyişəndə pillə dəyişmir.
+
+### Uzunluğun dəyişmə yolları
+
+1. **Həftəlik, qiymətə görə** (hər slot ayrıca): pəncərədəki qiymətlərdə
+   `+` sayı − `-` sayı ≥ 2 → +20 söz; ≤ −2 → −20 söz; qalan → saxla.
+2. **Əmrlə, dərhal:** istənilən routine sessiyasında —
+   - `uzat` / `qısalt` → ±20 söz. Gündəlik sessiyada slot göstərilməsə həmin mətnin
+     slotu; review sessiyasında slot tələb olunur (`səhəri uzat`, `axşamı qısalt`).
+   - `səhər 150 söz` → aralıq 140–160 (N−10…N+10).
+   - `LEVEL.md` yenilənir, Tarixçəyə sətir, commit `Change text length: am 100-120 → 120-140`,
+     push, təsdiq mesajı. Növbəti mətndən qüvvəyə minir.
 
 ## Gündəlik routine dəyişiklikləri
 
@@ -142,14 +180,15 @@ Mövcud routine (`trig_017Pt3sNTiukVCgvymhiu1JK`) yenilənir; git qaydaları də
    2. Yoxsa adi LRU; `Seyrək` kateqoriya son istifadədən < 45 gün keçibsə atlanır.
    3. 7 günlük təkrarsızlıq qaydası qalır.
 3. **Step 4 (mətn)** — sabit "A2–B1, 5–6 cümlə" qaydası əvəzinə slotun pilləsinin
-   sətri: cümlə sayı, yeni söz sayı, qrammatika, məzmun.
-4. **Step 5** — `HISTORY.md` sətrinin sonuna `| L<n>`.
+   sətri (yeni söz sayı, qrammatika, məzmun) və slotun hədəf söz aralığı.
+   Yazandan sonra söz sayını ölçür, lazım olsa düzəldir (bax: Uzunluq).
+4. **Step 5** — `HISTORY.md` sətrinin sonuna `| L<n> | <n>w`.
 5. **Step 6** — mesajın sonuna (fayla yox) bir sətir xatırlatma:
-   - səhər: `Qiymət: çətinlik · işlədə bilərəm · faydalı — məs: 2 4 5`
-   - axşam: `Qiymət: çətinlik · bilirdim(b/q/y) · anlama · maraq — məs: 3 q 4 5`
+   - səhər: `Qiymət: çətinlik · işlədə bilərəm · faydalı [+ uzun / - qısa] — məs: 2 4 5`
+   - axşam: `Qiymət: çətinlik · bilirdim(b/q/y) · anlama · maraq [+ uzun / - qısa] — məs: 3 q 4 5`
 6. **Step 7** — söz axınına əlavə olaraq qiymət axını: fayla `## Qiymət`,
    `RATINGS.md`-yə sətir (upsert), commit `Rate reading text: <title>`, push,
-   təsdiq mesajı.
+   təsdiq mesajı. Uzunluq əmrləri (`uzat` / `qısalt` / `N söz`) də burada işlənir.
 
 ## Həftəlik routine
 
@@ -175,6 +214,7 @@ Mövcud routine (`trig_017Pt3sNTiukVCgvymhiu1JK`) yenilənir; git qaydaları də
 - L5 → L6 yalnız slot üçün `c1_unlocked: yes` olanda (aylıq routine açır).
 - Slot L5-ə çatanda `l5_since` = həmin tarix; L5-dən enəndə `l5_since` silinir.
 - Bütün hədd rəqəmləri `LEVEL.md`-də — routine onları oradan oxuyur.
+- Uzunluq qərarı səviyyə qərarından ayrı verilir (bax: Uzunluq → həftəlik qayda).
 
 ### Söz testi
 
@@ -207,11 +247,15 @@ Mövcud routine (`trig_017Pt3sNTiukVCgvymhiu1JK`) yenilənir; git qaydaları də
 | Anlama (ort.)          | —     | 3.6   |
 | Maraq (ort.)           | —     | 4.4   |
 | Soruşulan söz          | 3     | 9     |
+| Söz sayı (ort.)        | 108   | 115   |
+| Uzunluq siqnalı (+/−)  | 2 / 0 | 0 / 1 |
 
 ## Qərar
 
 - Səhər: L3 → L4. Səbəb: çətinlik 2.3, işlədə bilərəm 4.2.
 - Axşam: L2 saxlanır. Səbəb: anlama 3.6 (≥ 4.3 lazımdır).
+- Səhər uzunluğu: 100–120 → 120–140. Səbəb: `+` 2, `-` 0.
+- Axşam uzunluğu: 100–120 saxlanır.
 
 ## Söz testi
 
@@ -222,13 +266,13 @@ Mövcud routine (`trig_017Pt3sNTiukVCgvymhiu1JK`) yenilənir; git qaydaları də
 cicada, shiny, through, ...
 ```
 
-Sonra: `LEVEL.md` yenilənir (pillə, `l5_since`, `last_weekly_review`, Tarixçə
+Sonra: `LEVEL.md` yenilənir (pillə, `l5_since`, söz aralığı, `last_weekly_review`, Tarixçə
 sətri), commit `Weekly review: <label>`, push, xülasə + test mesajı.
 
 ### "Geri qaytar"
 
 Review sessiyasında istifadəçi "geri qaytar" yazsa: `LEVEL.md`-nin `Cari vəziyyət`
-bölməsində pillə və `l5_since` dəyərləri review-dan əvvəlkinə qayıdır
+bölməsində pillə, `l5_since` və söz aralığı dəyərləri review-dan əvvəlkinə qayıdır
 (`last_weekly_review` dəyişmir), Tarixçəyə `geri qaytarıldı` sətri, commit
 `Revert level change: <label>`, push.
 
@@ -240,7 +284,7 @@ bölməsində pillə və `l5_since` dəyərləri review-dan əvvəlkinə qayıd�
 ### Məzmun
 
 1. **Trend** — həftə-həftə: ortalamalar, söz testi nəticəsi, soruşulan söz sayı,
-   pillə dəyişmələri (`reviews/*W*.md` + `RATINGS.md`).
+   orta mətn uzunluğu, pillə və uzunluq dəyişmələri (`reviews/*W*.md` + `RATINGS.md`).
 2. **Maraq** — kateqoriya üzrə **bütün tarixçə** boyu ortalama (axşam `mar`, səhər
    `fay`), ən azı 2 qiymət:
    - ≥ 4.5 → `Sevimli`; ≤ 2.0 → `Seyrək`; aradakı → siyahıdan çıxır.
@@ -263,6 +307,8 @@ Routine-lər bu faylı oxuyur və yeniləyir. Rəqəmləri əl ilə dəyişmək 
 
 - am: L3
 - pm: L2
+- am_words: 100-120
+- pm_words: 100-120
 - am_l5_since: -
 - pm_l5_since: -
 - am_c1_unlocked: no
@@ -285,6 +331,11 @@ Routine-lər bu faylı oxuyur və yeniləyir. Rəqəmləri əl ilə dəyişmək 
 - favorite: avg >= 4.5, min 2 ratings, repeat after 10 days
 - rare: avg <= 2.0, min 2 ratings, skip for 45 days
 - max_new_categories_per_month: 3
+- length_step: 20
+- length_min: 60
+- length_max: 300
+- length_vote: net (+) − (−) >= 2 → +step; <= −2 → −step
+- length_tolerance: 10%
 
 ## Maraq
 
@@ -293,7 +344,7 @@ Routine-lər bu faylı oxuyur və yeniləyir. Rəqəmləri əl ilə dəyişmək 
 
 ## Tarixçə
 
-- 2026-09-27: başlanğıc — am L3, pm L2
+- 2026-09-27: başlanğıc — am L3 100-120 söz, pm L2 100-120 söz
 ```
 
 ## Xəta halları
@@ -303,6 +354,9 @@ Routine-lər bu faylı oxuyur və yeniləyir. Rəqəmləri əl ilə dəyişmək 
 | Qiymət anlaşılmır | bir dəfə soruşur |
 | Həftədə qiymət yoxdur | review yazılır (mətn sayı, sözlər, test), pillə dəyişmir, xatırlatma |
 | `HISTORY.md` sətrində pillə yoxdur | `L2` hesab olunur |
+| `HISTORY.md` sətrində söz sayı yoxdur | mətn faylından sayılır |
+| Mətn 2 cəhddən sonra da hədəfə düşmür | olduğu kimi göndərilir, həqiqi say yazılır |
+| Uzunluq əmri hüdudu keçir (60–300) | hüdudda saxlanır, istifadəçiyə deyilir |
 | Review run-u düşdü | növbəti run `last_weekly_review`-dan bəri hamısını götürür |
 | Həftəlik və aylıq eyni gün | 30 dəqiqə fərq; push rədd olunarsa `pull --rebase` |
 | Git | `checkout -B main origin/main` + `push origin HEAD:main` (mövcud qayda) |
@@ -311,8 +365,9 @@ Routine-lər bu faylı oxuyur və yeniləyir. Rəqəmləri əl ilə dəyişmək 
 
 1. `LEVEL.md`, `RATINGS.md`, README yenilənməsi — commit, push.
 2. Gündəlik prompt yenilənir. İlk real sınaq: növbəti səhər run-u — mətn L3-də,
-   HISTORY-də `| L3`, mesajın sonunda xatırlatma.
-3. İstifadəçi həmin sessiyada qiymət yazır → `## Qiymət` + `RATINGS.md` sətri yoxlanır.
+   100–120 söz, HISTORY-də `| L3 | <n>w`, mesajın sonunda xatırlatma.
+3. İstifadəçi həmin sessiyada qiymət yazır (məs. `2 4 5 +`) → `## Qiymət` +
+   `RATINGS.md` sətri yoxlanır; `uzat` əmri → `LEVEL.md`-də `am_words` dəyişir.
 4. Həftəlik routine yaradılır və bu gün (W39) bir dəfə əl ilə işlədilir: qiymət
    yoxdur halı + söz testi yoxlanır; istifadəçi testə cavab verir → qiymətləndirmə
    yoxlanır.
