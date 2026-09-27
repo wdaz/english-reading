@@ -8,4 +8,4 @@ trigger-i də yeniləmək lazımdır (RemoteTrigger `update`).
 |---|---|---|---|
 | `daily.md` | Daily English Reading (AZ) — `trig_017Pt3sNTiukVCgvymhiu1JK` | hər gün 10:00, 19:00 | `0 6,15 * * *` |
 | `weekly.md` | Weekly English Progress Review (AZ) — `trig_01Bg2MjacYV1BQWfUGMn6gSG` | bazar 21:00 | `0 17 * * 0` |
-| `monthly.md` | Monthly English Progress Review (AZ) | ayın 1-i 21:30 | `30 17 1 * *` |
+| `monthly.md` | Monthly English Progress Review (AZ) — `trig_013XCgpjuNemjNuC28SJt4zS` | ayın 1-i 21:30 | `30 17 1 * *` |
