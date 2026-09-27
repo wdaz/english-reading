@@ -2,7 +2,10 @@
 
 Hər run bu fayla BİR sətir əlavə edir. Format:
 
-`YYYY-MM-DD | am|pm | LIST | index kateqoriya | keyword | English title`
+`YYYY-MM-DD | am|pm | LIST | index kateqoriya | keyword | English title | L<n> | <n>w`
+
+Son iki sütun: mətnin pilləsi (`LEVEL.md`) və passage-ın həqiqi söz sayı.
+2026-09-28-dən əvvəlki sətirlərdə bu sütunlar yoxdur — onlar üçün pillə L2 sayılır.
 
 Bu indeks təkrarın qarşısını almaq üçündür — yeni mövzu seçərkən bütün fayl oxunur.
 
