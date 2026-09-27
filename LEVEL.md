@@ -14,7 +14,7 @@ Rəqəmləri əl ilə də dəyişmək olar — formatı saxla.
 - pm_l5_since: -
 - am_c1_unlocked: no
 - pm_c1_unlocked: no
-- last_weekly_review: -
+- last_weekly_review: 2026-09-27 21:55
 - last_monthly_review: -
 
 ## Pilləkən
@@ -56,3 +56,4 @@ daxil edir. Uzunluq pillədən asılı deyil — onu `am_words` / `pm_words` ida
 ## Tarixçə
 
 - 2026-09-27: başlanğıc — am L3 100-120 söz, pm L2 100-120 söz
+- 2026-09-27 (2026-W39): dəyişiklik yoxdur
