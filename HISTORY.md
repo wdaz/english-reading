@@ -23,4 +23,5 @@ Bu indeks təkrarın qarşısını almaq üçündür — yeni mövzu seçərkən
 2026-09-25 | pm | KNOWLEDGE | 33 birds and insects | cicada | Why Cicadas Wait for Prime Numbers
 2026-09-26 | am | PRACTICAL | 0 travel: airports and flights | luggage | Reporting Lost Luggage at the Airport
 2026-09-26 | pm | KNOWLEDGE | 7 sleep and the brain | REM | The Night a Student Discovered REM Sleep
+2026-09-27 | am | PRACTICAL | 5 hotels and accommodation | noisy | Asking to Change a Noisy Hotel Room
 <!-- RUNS:END -->
