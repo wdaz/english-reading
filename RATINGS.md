@@ -10,4 +10,5 @@ Hər sətir bir mətnin qiymətidir. Gündəlik routine yazır (Step 7). Format:
 - Eyni mətn yenidən qiymətləndirilsə sətir əvəz olunur.
 
 <!-- RATINGS:BEGIN -->
+2026-09-28 | am | 1 personal budget and saving money | L3 | 131w | cet=3 isl=2 fay=5 uzn=0 | 2026-09-28 21:58
 <!-- RATINGS:END -->
