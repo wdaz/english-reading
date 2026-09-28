@@ -29,4 +29,5 @@ Bu indeks təkrarın qarşısını almaq üçündür — yeni mövzu seçərkən
 2026-09-27 | am | PRACTICAL | 5 hotels and accommodation | noisy | Asking to Change a Noisy Hotel Room
 2026-09-27 | pm | KNOWLEDGE | 1 space and planets | Venus | The Planet Where a Day Lasts Longer Than a Year
 2026-09-28 | am | PRACTICAL | 1 personal budget and saving money | envelope | The Envelope Method for Controlling Your Spending | L3 | 131w
+2026-09-28 | pm | KNOWLEDGE | 18 oceans and sea life | mantis | The Mantis Shrimp's Strange Way of Seeing Color | L2 | 129w
 <!-- RUNS:END -->
