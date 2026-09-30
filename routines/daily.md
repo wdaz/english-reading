@@ -129,8 +129,12 @@ For slot `am`:
     Qiymət: <çətinlik> <işlədə bilərəm> <faydalı> [uzunluq]
     Nümunə: 2 4 5 +
 
-    çətinlik, işlədə bilərəm, faydalı: 1–5
-    uzunluq: + uzun olsun · - qısa olsun · boş = uyğun
+    1-ci rəqəm · çətinlik: 1 çox asan · 5 lüğətsiz alınmadı
+    2-ci rəqəm · işlədə bilərəm: 1 özüm danışa bilmərəm · 5 rahat danışaram
+    3-cü rəqəm · faydalı: 1 belə situasiya olmur · 5 tez-tez rast gəlirəm
+    Sonda · uzunluq: + uzun olsun · - qısa olsun · boş = uyğun
+
+    Nümunədə: çətinlik 2, işlədə bilərəm 4, faydalı 5, daha uzun olsun.
     ```
 
 For slot `pm`:
@@ -141,9 +145,13 @@ For slot `pm`:
     Qiymət: <çətinlik> <bilirdim> <anlama> <maraq> [uzunluq]
     Nümunə: 3 q 4 5 -
 
-    çətinlik, anlama, maraq: 1–5
-    bilirdim: b bəli · q qismən · y yox
-    uzunluq: + uzun olsun · - qısa olsun · boş = uyğun
+    1-ci rəqəm · çətinlik: 1 çox asan · 5 lüğətsiz alınmadı
+    2-ci (hərf) · bilirdim: b bəli · q qismən · y yox
+    3-cü rəqəm · anlama (tərcüməsiz): 1 ≈20% · 3 ≈60% · 5 ≈100%
+    4-cü rəqəm · maraq: 1 darıxdırıcı · 5 daha çox istəyirəm
+    Sonda · uzunluq: + uzun olsun · - qısa olsun · boş = uyğun
+
+    Nümunədə: çətinlik 3, qismən bilirdim, anlama 4, maraq 5, daha qısa olsun.
     ```
 
 ## Step 7 — answer follow-ups in this session

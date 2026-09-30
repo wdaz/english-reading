@@ -34,11 +34,13 @@ Səhər (praktik mətn):
 
     Qiymət: <çətinlik> <işlədə bilərəm> <faydalı> [uzunluq]
     Nümunə: 2 4 5 +
+    (çətinlik 2, işlədə bilərəm 4, faydalı 5, daha uzun olsun)
 
 Axşam (bilik mətni):
 
     Qiymət: <çətinlik> <bilirdim> <anlama> <maraq> [uzunluq]
     Nümunə: 3 q 4 5 -
+    (çətinlik 3, qismən bilirdim, anlama 4, maraq 5, daha qısa olsun)
 
 | Sahə | 1 | 3 | 5 |
 |---|---|---|---|
