@@ -33,4 +33,5 @@ Bu indeks təkrarın qarşısını almaq üçündür — yeni mövzu seçərkən
 2026-09-29 | am | PRACTICAL | 2 office life and meetings | reschedule | Asking to Reschedule a Work Meeting | L3 | 120w
 2026-09-29 | pm | KNOWLEDGE | 20 ancient civilizations | reef | Nan Madol: The Ancient City Built on a Reef | L2 | 120w
 2026-09-30 | am | PRACTICAL | 10 renting a flat and home repairs | leak | Reporting a Leaking Tap to Your Landlord | L3 | 115w
+2026-09-30 | pm | KNOWLEDGE | 34 rivers, lakes and deserts | Eyre | The Lake That Is Usually Empty | L2 | 114w
 <!-- RUNS:END -->
