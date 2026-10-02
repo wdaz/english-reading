@@ -129,10 +129,28 @@ For slot `am`:
     Qiymət: <çətinlik> <işlədə bilərəm> <faydalı> [uzunluq]
     Nümunə: 2 4 5 +
 
-    1-ci rəqəm · çətinlik: 1 çox asan · 5 lüğətsiz alınmadı
-    2-ci rəqəm · işlədə bilərəm: 1 özüm danışa bilmərəm · 5 rahat danışaram
-    3-cü rəqəm · faydalı: 1 belə situasiya olmur · 5 tez-tez rast gəlirəm
-    Sonda · uzunluq: + uzun olsun · - qısa olsun · boş = uyğun
+    çətinlik (oxuyanda nə qədər çətin idi):
+      1 = hər şey tanış idi, lüğətə baxmadım
+      2 = 1–2 yeni söz, mənası kontekstdən aydın oldu
+      3 = bir neçə söz/cümlə çətin idi, amma ümumi fikri tutdum
+      4 = çox söz bilmirdim, tərcüməyə tez-tez baxdım
+      5 = tərcüməsiz demək olar heç nə anlamadım
+
+    işlədə bilərəm (bu cümlələri danışıqda işlədə bilərdim?):
+      1 = yox, heç nə deyə bilməzdim
+      2 = yalnız bir-iki söz deyərdim
+      3 = yarımçıq danışardım
+      4 = çox hissəsini deyərdim
+      5 = rahat danışardım
+
+    faydalı (belə situasiya həyatımda olur?):
+      1 = heç olmur
+      2 = çox nadir
+      3 = bəzən
+      4 = tez-tez
+      5 = demək olar hər gün
+
+    uzunluq (boş qoysan = uyğun idi): + daha uzun olsun · - daha qısa olsun
 
     Nümunədə: çətinlik 2, işlədə bilərəm 4, faydalı 5, daha uzun olsun.
     ```
@@ -145,11 +163,27 @@ For slot `pm`:
     Qiymət: <çətinlik> <bilirdim> <anlama> <maraq> [uzunluq]
     Nümunə: 3 q 4 5 -
 
-    1-ci rəqəm · çətinlik: 1 çox asan · 5 lüğətsiz alınmadı
-    2-ci (hərf) · bilirdim: b bəli · q qismən · y yox
-    3-cü rəqəm · anlama (tərcüməsiz): 1 ≈20% · 3 ≈60% · 5 ≈100%
-    4-cü rəqəm · maraq: 1 darıxdırıcı · 5 daha çox istəyirəm
-    Sonda · uzunluq: + uzun olsun · - qısa olsun · boş = uyğun
+    çətinlik (oxuyanda nə qədər çətin idi):
+      1 = hər şey tanış idi, lüğətə baxmadım
+      2 = 1–2 yeni söz, mənası kontekstdən aydın oldu
+      3 = bir neçə söz/cümlə çətin idi, amma ümumi fikri tutdum
+      4 = çox söz bilmirdim, tərcüməyə tez-tez baxdım
+      5 = tərcüməsiz demək olar heç nə anlamadım
+
+    bilirdim (mövzunu əvvəldən bilirdim?): b = bəli · q = qismən · y = yox
+
+    anlama (tərcümənin altına baxmamış neçə faiz anladım):
+      1 = ≈20%   2 = ≈40%   3 = ≈60% (əsas fikri tutdum)
+      4 = ≈80%   5 = ≈100% (hər şey aydın)
+
+    maraq (oxumaq nə qədər maraqlı idi):
+      1 = darıxdırıcı
+      2 = az maraqlı
+      3 = normal
+      4 = maraqlı
+      5 = çox maraqlı, belə mətnlərdən daha çox istəyirəm
+
+    uzunluq (boş qoysan = uyğun idi): + daha uzun olsun · - daha qısa olsun
 
     Nümunədə: çətinlik 3, qismən bilirdim, anlama 4, maraq 5, daha qısa olsun.
     ```

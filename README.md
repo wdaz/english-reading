@@ -42,15 +42,16 @@ Axşam (bilik mətni):
     Nümunə: 3 q 4 5 -
     (çətinlik 3, qismən bilirdim, anlama 4, maraq 5, daha qısa olsun)
 
-| Sahə | 1 | 3 | 5 |
-|---|---|---|---|
-| Çətinlik | hər şey tanış idi | bir neçə cümlə çətin idi | lüğətsiz alınmadı |
-| İşlədə bilərəm | bu situasiyada özüm danışa bilməzdim | yarımçıq danışardım | rahat danışardım |
-| Faydalı | belə situasiya həyatımda olmur | bəzən olur | tez-tez rast gəlirəm |
-| Anlama (tərcüməsiz) | ≈ 20% | ≈ 60% | ≈ 100% |
-| Maraq | darıxdırıcı | normal | belə mətnlərdən daha çox istəyirəm |
+Hər rəqəm 1-dən 5-ə qədərdir. Hər sahənin hər balı:
 
-- **Anlama:** 1 ≈ 20% · 2 ≈ 40% · 3 ≈ 60% · 4 ≈ 80% · 5 ≈ 100%
+| Bal | Çətinlik | İşlədə bilərəm | Faydalı | Anlama (tərcüməsiz) | Maraq |
+|---|---|---|---|---|---|
+| 1 | hər şey tanış idi | heç nə deyə bilməzdim | heç olmur | ≈ 20% | darıxdırıcı |
+| 2 | 1–2 yeni söz, kontekstdən aydın | bir-iki söz deyərdim | çox nadir | ≈ 40% | az maraqlı |
+| 3 | bir neçə cümlə çətin, ümumi fikri tutdum | yarımçıq danışardım | bəzən | ≈ 60% | normal |
+| 4 | çox söz bilmirdim, tərcüməyə tez-tez baxdım | çox hissəsini deyərdim | tez-tez | ≈ 80% | maraqlı |
+| 5 | tərcüməsiz demək olar heç nə anlamadım | rahat danışardım | demək olar hər gün | ≈ 100% | çox maraqlı, daha çox istəyirəm |
+
 - **Bilirdim:** `b` bəli · `q` qismən · `y` yox
 - **Uzunluq** (istəyə bağlı): `+` daha uzun olsun · `-` daha qısa olsun · yazmasan = uyğun
 - Təbii dillə də yazmaq olar: "asan idi, bilmirdim, çox maraqlı".
