@@ -139,8 +139,8 @@ If the push is rejected, run `git pull --rebase origin main` once and `git push 
 
 ## Step 6 — deliver
 
-Send the whole review file as your final message. End it with:
-- `Testə belə cavab ver: 1 ... 2 ... 3 ... 4 ... 5 ...`
+Your final message must contain the whole review file — the `Xülasə` table, `Qərar` and all 5 quiz questions — so it appears in full in the thread and in the notification. Do not summarise it, do not just say that you pushed or link to the file, and do not add commentary before the title. The commit is only the record; the message is how Ruslan sees the quiz and answers it. End the message with:
+- `Testə belə cavab ver: 1 ... 2 ... 3 ... 4 ... 5 ...` (he answers in this same thread — Step 7 grades it)
 - only if a level or length changed: `Dəyişikliyi bəyənməsən, "geri qaytar" yaz.`
 
 ## Step 7 — follow-ups in this session
