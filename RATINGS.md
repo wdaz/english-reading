@@ -17,4 +17,5 @@ Hər sətir bir mətnin qiymətidir. Gündəlik routine yazır (Step 7). Format:
 2026-09-30 | am | 10 renting a flat and home repairs | L3 | 115w | cet=3 isl=3 fay=3 uzn=+ | 2026-09-30 10:37
 2026-09-30 | pm | 34 rivers, lakes and deserts | L2 | 114w | cet=4 bil=y anl=3 mar=3 uzn=+ | 2026-10-01 07:09
 2026-10-01 | pm | 19 time, calendars and clocks | L2 | 123w | cet=5 bil=y anl=1 mar=2 uzn=+ | 2026-10-02 09:03
+2026-10-02 | pm | 4 music and instruments | L2 | 111w | cet=5 bil=y anl=2 mar=3 uzn=0 | 2026-10-03 20:20
 <!-- RATINGS:END -->
