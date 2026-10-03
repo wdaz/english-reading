@@ -37,4 +37,5 @@ Bu indeks təkrarın qarşısını almaq üçündür — yeni mövzu seçərkən
 2026-10-01 | pm | KNOWLEDGE | 19 time, calendars and clocks | Samoa | The Day Samoa Skipped | L2 | 123w
 2026-10-02 | am | PRACTICAL | 3 shopping and stores | receipt | Returning a Jacket Without the Receipt | L3 | 128w
 2026-10-02 | pm | KNOWLEDGE | 4 music and instruments | theremin | The Instrument You Play Without Touching | L2 | 111w
+2026-10-03 | am | PRACTICAL | 9 IT projects and teamwork (tasks, deadlines, releases) | delay | Telling Your Team a Task Will Be Late | L3 | 113w
 <!-- RUNS:END -->
