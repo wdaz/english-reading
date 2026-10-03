@@ -39,5 +39,4 @@ Bu indeks təkrarın qarşısını almaq üçündür — yeni mövzu seçərkən
 2026-10-02 | pm | KNOWLEDGE | 4 music and instruments | theremin | The Instrument You Play Without Touching | L2 | 111w
 2026-10-03 | am | PRACTICAL | 9 IT projects and teamwork (tasks, deadlines, releases) | delay | Telling Your Team a Task Will Be Late | L3 | 113w
 2026-10-03 | pm | KNOWLEDGE | 35 plants, trees and forests | bamboo | The Bamboo That Flowers Once in 48 Years | L2 | 104w
-2026-10-03 | pm | KNOWLEDGE | 37 the polar regions | desert | Antarctica: The Biggest Desert on Earth | L2 | 113w
 <!-- RUNS:END -->
