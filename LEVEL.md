@@ -7,14 +7,14 @@ Rəqəmləri əl ilə də dəyişmək olar — formatı saxla.
 ## Cari vəziyyət
 
 - am: L3
-- pm: L2
-- am_words: 100-120
-- pm_words: 100-120
+- pm: L1
+- am_words: 120-140
+- pm_words: 120-140
 - am_l5_since: -
 - pm_l5_since: -
 - am_c1_unlocked: no
 - pm_c1_unlocked: no
-- last_weekly_review: 2026-09-27 21:55
+- last_weekly_review: 2026-10-04 21:04
 - last_monthly_review: 2026-10-01 21:38
 
 ## Pilləkən
@@ -59,3 +59,4 @@ daxil edir. Uzunluq pillədən asılı deyil — onu `am_words` / `pm_words` ida
 - 2026-09-27 (2026-W39): dəyişiklik yoxdur
 - 2026-10-01 (2026-09 aylıq): dəyişiklik yoxdur
 - 2026-10-02 (2026-09 aylıq): düzəliş — W39 söz testi nəticəsi "cavablanmayıb"-dan 1/5-ə yeniləndi
+- 2026-10-04 (2026-W40): dəyişiklik — axşam L2 → L1 (çət. ort. 4.4, anlama ort. 2.2), səhər L3 saxlanıldı; səhər uzunluğu 100-120 → 120-140, axşam uzunluğu 100-120 → 120-140
