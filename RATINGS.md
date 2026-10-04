@@ -18,4 +18,5 @@ Hər sətir bir mətnin qiymətidir. Gündəlik routine yazır (Step 7). Format:
 2026-09-30 | pm | 34 rivers, lakes and deserts | L2 | 114w | cet=4 bil=y anl=3 mar=3 uzn=+ | 2026-10-01 07:09
 2026-10-01 | pm | 19 time, calendars and clocks | L2 | 123w | cet=5 bil=y anl=1 mar=2 uzn=+ | 2026-10-02 09:03
 2026-10-02 | pm | 4 music and instruments | L2 | 111w | cet=5 bil=y anl=2 mar=3 uzn=0 | 2026-10-03 20:20
+2026-10-04 | am | 13 emails and phone calls at work | L3 | 123w | cet=1 isl=4 fay=3 uzn=+ | 2026-10-04 11:19
 <!-- RATINGS:END -->
