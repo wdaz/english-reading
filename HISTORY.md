@@ -41,4 +41,5 @@ Bu indeks təkrarın qarşısını almaq üçündür — yeni mövzu seçərkən
 2026-10-03 | pm | KNOWLEDGE | 35 plants, trees and forests | bamboo | The Bamboo That Flowers Once in 48 Years | L2 | 104w
 2026-10-04 | am | PRACTICAL | 13 emails and phone calls at work | repeat | Asking Someone to Repeat Themselves on a Phone Call | L3 | 123w
 2026-10-04 | pm | KNOWLEDGE | 37 the polar regions | icefish | The Fish With Clear Blood | L2 | 116w
+2026-10-05 | pm | KNOWLEDGE | 5 money and trade history | Yap | The Island Where Stones Were Money | L1 | 137w
 <!-- RUNS:END -->
