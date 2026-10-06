@@ -44,4 +44,5 @@ Bu indeks təkrarın qarşısını almaq üçündür — yeni mövzu seçərkən
 2026-10-05 | pm | KNOWLEDGE | 5 money and trade history | Yap | The Island Where Stones Were Money | L1 | 137w
 2026-10-05 | pm | KNOWLEDGE | 23 weather and climate | petrichor | The Smell of Rain | L1 | 135w
 2026-10-06 | am | PRACTICAL | 22 cybersecurity and protecting personal data | verification | Setting Up Two-Step Verification | L3 | 154w
+2026-10-06 | pm | KNOWLEDGE | 3 wild animals | wombat | The Animal That Makes Square Droppings | L1 | 128w
 <!-- RUNS:END -->
