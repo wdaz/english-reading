@@ -45,4 +45,5 @@ Bu indeks təkrarın qarşısını almaq üçündür — yeni mövzu seçərkən
 2026-10-05 | pm | KNOWLEDGE | 23 weather and climate | petrichor | The Smell of Rain | L1 | 135w
 2026-10-06 | am | PRACTICAL | 22 cybersecurity and protecting personal data | verification | Setting Up Two-Step Verification | L3 | 154w
 2026-10-06 | pm | KNOWLEDGE | 3 wild animals | wombat | The Animal That Makes Square Droppings | L1 | 128w
+2026-10-07 | am | PRACTICAL | 18 smartphones and apps | screen | Fixing a Cracked Phone Screen | L3 | 138w
 <!-- RUNS:END -->
